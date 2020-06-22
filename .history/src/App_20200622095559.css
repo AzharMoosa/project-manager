@@ -1,0 +1,109 @@
+:root {
+  --red: #ff5a5a;
+  --green: #76ffca;
+  --blue: #76daff;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Reg";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+/* Body */
+
+body {
+  font-family: "Poppins-Reg";
+  line-height: 1.4;
+}
+
+/* Container */
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30vw;
+  background-color: var(--red);
+  height: 100vh;
+  color: #fff;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Poppins-Med";
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.nav-btns::after,
+.nav-btns:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.nav-btns {
+  width: 90%;
+  margin: auto;
+}
+
+.home-btn,
+.create-project-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.home-btn h3,
+.create-project-btn h3 {
+  margin-left: 1rem;
+  font-family: "Poppins-Med";
+  font-size: 25px;
+}
+
+.home-btn svg,
+.create-project-btn svg {
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  width: 70vw;
+}
+
+.home-title {
+  font-size: 80px;
+  width: 100%;
+  font-family: "Poppins-Med";
+  color: var(--red);
+  display: flex;
+  justify-content: center;
+}
+
+.home-title:after {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid var(--red);
+  width: 10%;
+  margin: 1.5rem auto;
+}

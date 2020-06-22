@@ -1,0 +1,47 @@
+:root {
+  --red: #ff5a5a;
+  --green: #76ffca;
+  --blue: #76daff;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Reg";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+/* Body */
+
+body {
+  font-family: "Poppins-Reg";
+  line-height: 1.4;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30vw;
+  background-color: var(--red);
+  height: 100vh;
+  color: #fff;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Poppins-Med";
+  text-align: center;
+  padding-top: 2rem;
+}

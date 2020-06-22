@@ -1,0 +1,21 @@
+:root {
+  --red: #ff5a5a;
+  --green: #76ffca;
+  --blue: #76daff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
