@@ -1,0 +1,173 @@
+:root {
+  --red: #ff5a5a;
+  --green: #76ffca;
+  --blue: #76daff;
+  --yellow: #fffa76;
+  --purple: #ab76ff;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Reg";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+/* Body */
+
+body {
+  font-family: "Poppins-Reg";
+  line-height: 1.4;
+}
+
+/* Utilities */
+
+/* Bullet Points */
+
+.project-side:before,
+.blue:before,
+.yellow:before,
+.green:before,
+.purple:before {
+  content: " ";
+  height: 12px;
+  width: 12px;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+
+.blue:before {
+  background-color: var(--blue);
+}
+
+.yellow:before {
+  background-color: var(--yellow);
+}
+
+.green:before {
+  background-color: var(--green);
+}
+
+.purple:before {
+  background-color: var(--purple);
+}
+
+/* Container */
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30vw;
+  background-color: var(--red);
+  height: 100vh;
+  color: #fff;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Poppins-Med";
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.nav-btns::after,
+.nav-btns:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.nav-btns {
+  width: 90%;
+  margin: auto;
+}
+
+.home-btn,
+.create-project-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.home-btn h3,
+.create-project-btn h3 {
+  margin-left: 1rem;
+  font-family: "Poppins-Med";
+  font-size: 25px;
+}
+
+.home-btn svg,
+.create-project-btn svg {
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title {
+  font-size: 80px;
+  font-family: "Poppins-Med";
+  color: var(--red);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.home-title:after {
+  content: " ";
+  display: block;
+  border-bottom: 5px solid var(--red);
+  width: 342px;
+  margin: 1.5rem auto;
+}
+
+/* Project Sidebar List */
+.project-side {
+  width: 85%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project-side h3 {
+  font-size: 25px;
+}
+
+/* Progress Bar */
+.progressbar {
+  background-color: black;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+/* Progress Bar */
+
+.progressbar > div {
+  background-color: orange;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
+}
