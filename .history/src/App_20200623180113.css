@@ -206,7 +206,7 @@ body {
 /* Create Project Popup */
 
 .hide {
-  display: none !important;
+  display: none;
 }
 
 .create-project-popup {
@@ -230,9 +230,6 @@ body {
   min-width: 526px;
   min-height: 617px;
   color: #fff;
-  -webkit-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .create-project-popup-content h1 {

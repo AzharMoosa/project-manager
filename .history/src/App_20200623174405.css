@@ -205,10 +205,6 @@ body {
 
 /* Create Project Popup */
 
-.hide {
-  display: none !important;
-}
-
 .create-project-popup {
   display: flex;
   justify-content: center;
@@ -230,9 +226,6 @@ body {
   min-width: 526px;
   min-height: 617px;
   color: #fff;
-  -webkit-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .create-project-popup-content h1 {
@@ -266,9 +259,10 @@ body {
   outline: none;
   color: #fff;
   font-size: 21px;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   width: 100%;
   margin-bottom: 2rem;
+  font-family: "Poppins-Reg";
 }
 
 .form-input textarea {
@@ -278,10 +272,9 @@ body {
   outline: none;
   color: #fff;
   font-size: 21px;
-  padding: 0.5rem 0.5rem;
+  padding: 0 0.5rem;
   width: 100%;
   margin-bottom: 2rem;
-  font-family: "Poppins-Reg";
 }
 
 .create-btn {

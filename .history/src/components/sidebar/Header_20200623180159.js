@@ -1,10 +1,7 @@
 import React from "react";
 
 const Header = () => {
-  const displayPopup = () => {
-    let popup = document.querySelector(".create-project-popup");
-    popup.classList.remove("hide");
-  };
+  const displayPopup = () => {};
 
   return (
     <div>
