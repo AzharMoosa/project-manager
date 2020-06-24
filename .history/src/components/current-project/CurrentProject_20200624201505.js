@@ -39,18 +39,6 @@ const CurrentProject = () => {
     if (taskInput === "") {
       return;
     }
-    let newTask = {
-      task: taskInput,
-      complete: false,
-      id: Math.floor(Math.random() * 100),
-    };
-    let updatedTasks = [...selectedProject.tasks, newTask];
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
-    clearTaskInput();
   };
 
   const clearToolsInput = () => {
@@ -176,7 +164,6 @@ const CurrentProject = () => {
           height='52'
           viewBox='0 0 52 52'
           className='add-tasks-btn'
-          onClick={updateTask}
         >
           <g
             id='Add_Tool_Btn'
@@ -206,7 +193,7 @@ const CurrentProject = () => {
         </svg>
         <input
           className='add-task-input'
-          onChange={(e) => setTaskInput(e.target.value)}
+          onChange={(e) => setToolInput(e.target.value)}
           placeholder={"ADD TASK"}
         />
       </div>

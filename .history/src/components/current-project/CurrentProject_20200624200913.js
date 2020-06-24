@@ -11,7 +11,6 @@ const CurrentProject = () => {
   );
   const [projects, setProjects] = useContext(ProjectContext);
   const [toolInput, setToolInput] = useState("");
-  const [taskInput, setTaskInput] = useState("");
 
   const modifyOverview = () => {
     let overview = document.querySelector(".overview").value;
@@ -35,34 +34,10 @@ const CurrentProject = () => {
     clearToolsInput();
   };
 
-  const updateTask = () => {
-    if (taskInput === "") {
-      return;
-    }
-    let newTask = {
-      task: taskInput,
-      complete: false,
-      id: Math.floor(Math.random() * 100),
-    };
-    let updatedTasks = [...selectedProject.tasks, newTask];
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
-    clearTaskInput();
-  };
-
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
     setToolInput("");
-  };
-
-  const clearTaskInput = () => {
-    let input = document.querySelector(".add-task-input");
-    input.value = "";
-    setTaskInput("");
   };
 
   const updateProjects = () => {
@@ -175,8 +150,6 @@ const CurrentProject = () => {
           width='52'
           height='52'
           viewBox='0 0 52 52'
-          className='add-tasks-btn'
-          onClick={updateTask}
         >
           <g
             id='Add_Tool_Btn'
@@ -189,7 +162,7 @@ const CurrentProject = () => {
               transform='translate(49.866 241.866)'
               fill='#76ffca'
               stroke='#000'
-              strokeWidth='2'
+              stroke-width='2'
             >
               <circle cx='26' cy='26' r='26' stroke='none' />
               <circle cx='26' cy='26' r='25' fill='none' />
@@ -199,16 +172,12 @@ const CurrentProject = () => {
               d='M12.21,2V12.21H2v2.269H12.21v10.21h2.269V14.479h10.21V12.21H14.479V2Z'
               transform='translate(62.905 254.905)'
               stroke='#404040'
-              strokeWidth='1'
-              fillRule='evenodd'
+              stroke-width='1'
+              fill-rule='evenodd'
             />
           </g>
         </svg>
-        <input
-          className='add-task-input'
-          onChange={(e) => setTaskInput(e.target.value)}
-          placeholder={"ADD TASK"}
-        />
+        <input value={ADD TASK/>
       </div>
     </div>
   );

@@ -39,18 +39,8 @@ const CurrentProject = () => {
     if (taskInput === "") {
       return;
     }
-    let newTask = {
-      task: taskInput,
-      complete: false,
-      id: Math.floor(Math.random() * 100),
-    };
-    let updatedTasks = [...selectedProject.tasks, newTask];
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
-    clearTaskInput();
+
+    let updatedTasks = [...selectedProject.tasks, taskInput];
   };
 
   const clearToolsInput = () => {

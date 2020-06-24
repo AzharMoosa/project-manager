@@ -283,7 +283,6 @@ body {
 
 .add-tasks input {
   background: transparent;
-  font-family: "Poppins-Med";
   border: none;
   font-size: 30px;
   outline: none;
@@ -294,11 +293,6 @@ body {
 .add-tasks input::placeholder {
   color: #000;
   opacity: 0.7;
-}
-
-.add-tasks-btn {
-  cursor: pointer;
-  outline: none;
 }
 
 /* Project Sidebar List */

@@ -6,7 +6,7 @@ export const SelectedProjectProvider = (props) => {
   const [selectedProject, setSelectedProject] = useState({
     name: "Error 404",
     overview: "Create a new project by using the button on the left.",
-    tools: ["Error 404"],
+    tools: [],
     progress: 0,
     tasks: [
       {

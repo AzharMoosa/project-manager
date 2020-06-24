@@ -279,26 +279,17 @@ body {
   padding: 1rem 0;
   display: flex;
   align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  color: #000;
 }
 
-.add-tasks input {
-  background: transparent;
-  font-family: "Poppins-Med";
-  border: none;
-  font-size: 30px;
-  outline: none;
+.add-tasks h3 {
   color: #000;
   margin-left: 1rem;
-}
-
-.add-tasks input::placeholder {
-  color: #000;
-  opacity: 0.7;
-}
-
-.add-tasks-btn {
-  cursor: pointer;
-  outline: none;
+  margin-bottom: 1rem;
 }
 
 /* Project Sidebar List */

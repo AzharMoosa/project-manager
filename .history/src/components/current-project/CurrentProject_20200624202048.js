@@ -39,12 +39,7 @@ const CurrentProject = () => {
     if (taskInput === "") {
       return;
     }
-    let newTask = {
-      task: taskInput,
-      complete: false,
-      id: Math.floor(Math.random() * 100),
-    };
-    let updatedTasks = [...selectedProject.tasks, newTask];
+    let updatedTasks = [...selectedProject.tasks, taskInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tasks: updatedTasks,
