@@ -9,8 +9,6 @@ const CurrentProject = () => {
     SelectedProjectContext
   );
 
-  const modifyOverview = (e) => {};
-
   return (
     <div className='selected-project'>
       <h1 className='selected-project-title'>{selectedProject.name}</h1>
@@ -70,7 +68,7 @@ const CurrentProject = () => {
 
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
-          <Task key={Math.random() * 100} task={task} />
+          <Task key={Math.random() * 100} />
         ))}
       </div>
     </div>

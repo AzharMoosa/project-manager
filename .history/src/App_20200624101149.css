@@ -234,31 +234,6 @@ body {
   padding-bottom: 1rem;
 }
 
-.bullet-point {
-  border-radius: 50%;
-  width: 41px;
-  height: 41px;
-  background: #fff;
-  border: 3px solid #000;
-  cursor: pointer;
-  margin-right: 1rem;
-}
-
-.complete {
-  background: var(--blue);
-}
-
-.task {
-  display: flex;
-  align-items: center;
-}
-
-.task h3 {
-  font-size: 25px;
-  font-family: "Poppins-Reg";
-  margin-bottom: 1rem;
-}
-
 /* Project Sidebar List */
 
 .project-side {

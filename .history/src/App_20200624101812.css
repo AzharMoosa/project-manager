@@ -253,12 +253,6 @@ body {
   align-items: center;
 }
 
-.task h3 {
-  font-size: 25px;
-  font-family: "Poppins-Reg";
-  margin-bottom: 1rem;
-}
-
 /* Project Sidebar List */
 
 .project-side {

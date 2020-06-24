@@ -3,8 +3,8 @@ import React from "react";
 const Task = ({ task }) => {
   return (
     <div className='task'>
-      <div className={`bullet-point ${task.complete ? "complete" : ""}`}></div>
-      <h3>{task.task}</h3>
+      <div className='bullet-point'></div>
+      <h3></h3>
     </div>
   );
 };

@@ -168,7 +168,7 @@ body {
 }
 
 .selected-project-heading:after,
-.tools:before {
+.overview:after {
   content: " ";
   display: block;
   border-bottom: 1px solid #000;
@@ -178,11 +178,11 @@ body {
 .overview {
   color: #4e4e4e;
   font-size: 25px;
-  font-family: "Poppins-Reg";
   padding: 0.5rem 0;
   outline: none;
   border: none;
-  resize: none;
+  overflow-y: auto;
+  height: auto;
 }
 
 .tools-head {
@@ -232,31 +232,6 @@ body {
   align-items: center;
   border-bottom: 1px solid #000;
   padding-bottom: 1rem;
-}
-
-.bullet-point {
-  border-radius: 50%;
-  width: 41px;
-  height: 41px;
-  background: #fff;
-  border: 3px solid #000;
-  cursor: pointer;
-  margin-right: 1rem;
-}
-
-.complete {
-  background: var(--blue);
-}
-
-.task {
-  display: flex;
-  align-items: center;
-}
-
-.task h3 {
-  font-size: 25px;
-  font-family: "Poppins-Reg";
-  margin-bottom: 1rem;
 }
 
 /* Project Sidebar List */

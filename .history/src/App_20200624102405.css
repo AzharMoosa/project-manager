@@ -251,6 +251,7 @@ body {
 .task {
   display: flex;
   align-items: center;
+  border: 10px solid black;
 }
 
 .task h3 {

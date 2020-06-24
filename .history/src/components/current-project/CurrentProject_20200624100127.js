@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
@@ -9,7 +9,9 @@ const CurrentProject = () => {
     SelectedProjectContext
   );
 
-  const modifyOverview = (e) => {};
+  const modifyOverview = (e) => {
+    selectedProject.overview = e.target.value;
+  };
 
   return (
     <div className='selected-project'>
@@ -20,6 +22,7 @@ const CurrentProject = () => {
         className='overview'
         value={selectedProject.overview}
         onChange={modifyOverview}
+        resize: none;
       />
       <div className='tools'>
         <div className='tools-head'>
@@ -70,7 +73,7 @@ const CurrentProject = () => {
 
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
-          <Task key={Math.random() * 100} task={task} />
+          <Task key={Math.random() * 100} />
         ))}
       </div>
     </div>

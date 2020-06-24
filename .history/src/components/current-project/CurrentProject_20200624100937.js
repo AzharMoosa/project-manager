@@ -9,7 +9,14 @@ const CurrentProject = () => {
     SelectedProjectContext
   );
 
-  const modifyOverview = (e) => {};
+  const [overview, setOverview] = useState("");
+
+  const modifyOverview = (e) => {
+    setSelectedProject((selectedProject) => [
+      ...selectedProject,
+      selectedProject.overview,
+    ]);
+  };
 
   return (
     <div className='selected-project'>
@@ -70,7 +77,7 @@ const CurrentProject = () => {
 
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
-          <Task key={Math.random() * 100} task={task} />
+          <Task key={Math.random() * 100} />
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
@@ -9,18 +9,15 @@ const CurrentProject = () => {
     SelectedProjectContext
   );
 
-  const modifyOverview = (e) => {};
+  const modifyOverview = (e) => {
+    selectedProject.overview = e.target.value;
+  };
 
   return (
     <div className='selected-project'>
       <h1 className='selected-project-title'>{selectedProject.name}</h1>
       <h3 className='selected-project-heading'>Overview</h3>
-      <textarea
-        type='text'
-        className='overview'
-        value={selectedProject.overview}
-        onChange={modifyOverview}
-      />
+      <input type='text' />
       <div className='tools'>
         <div className='tools-head'>
           <h3>Tools</h3>
@@ -70,7 +67,7 @@ const CurrentProject = () => {
 
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
-          <Task key={Math.random() * 100} task={task} />
+          <Task key={Math.random() * 100} />
         ))}
       </div>
     </div>

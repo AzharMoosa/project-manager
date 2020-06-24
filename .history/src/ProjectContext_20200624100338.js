@@ -27,7 +27,7 @@ export const ProjectProvider = (props) => {
     {
       name: "Expense Tracker",
       overview:
-        "A expense tracker application which allows you to budget and track your savings.  Track what expenses you have.",
+        "A expense tracker application which allows you to budget and track your savings.  Track what expenses you have/",
       tools: ["HTML", "CSS", "JAVASCRIPT", "REACT"],
       progress: 40,
       tasks: [

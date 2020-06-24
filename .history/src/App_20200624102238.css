@@ -251,12 +251,13 @@ body {
 .task {
   display: flex;
   align-items: center;
+  border: 10px solid black;
 }
 
 .task h3 {
   font-size: 25px;
   font-family: "Poppins-Reg";
-  margin-bottom: 1rem;
+  line-height: 200px;
 }
 
 /* Project Sidebar List */
