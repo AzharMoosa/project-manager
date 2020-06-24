@@ -89,14 +89,7 @@ const CurrentProject = () => {
     updateProjects();
   };
 
-  const updateDate = () => {
-    let newDate = document.querySelector(".date-input").value;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      date: newDate,
-    }));
-    updateProjects();
-  };
+  const updateDate = () => {};
 
   return (
     <div className='selected-project'>
@@ -222,12 +215,7 @@ const CurrentProject = () => {
 
       <div className='date'>
         <h3>Date</h3>
-        <input
-          type='date'
-          value={selectedProject.date}
-          className='date-input'
-          onChange={updateDate}
-        />
+        <input type='date' value={selectedProject.date} onChange={updateDate} />
       </div>
     </div>
   );

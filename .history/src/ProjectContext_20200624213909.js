@@ -20,7 +20,7 @@ export const ProjectProvider = (props) => {
         { task: "Use REACT", complete: false, id: 7 },
       ],
       color: "blue",
-      date: "2020-06-26",
+      date: "26-06-2020",
       id: 28392,
     },
 
@@ -63,7 +63,7 @@ export const ProjectProvider = (props) => {
         { task: "Use REACT", complete: false, id: 4 },
       ],
       color: "white",
-      date: "2020-09-30",
+      date: "30/09/2020",
       id: 203234,
     },
 
@@ -80,7 +80,7 @@ export const ProjectProvider = (props) => {
         { task: "Use REACT", complete: false, id: 4 },
       ],
       color: "green",
-      date: "2020-16-12",
+      date: "16/12/2020",
       id: 20327734,
     },
 

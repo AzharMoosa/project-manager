@@ -90,10 +90,10 @@ const CurrentProject = () => {
   };
 
   const updateDate = () => {
-    let newDate = document.querySelector(".date-input").value;
+    let newDate = document.querySelector(".date-input");
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
-      date: newDate,
+      date: overview,
     }));
     updateProjects();
   };

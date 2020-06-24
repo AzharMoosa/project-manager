@@ -303,21 +303,6 @@ body {
 
 .date {
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid #000;
-}
-
-.date h3 {
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-}
-
-.date input {
-  width: 200px;
-  height: 46px;
-  border-radius: 14px;
-  border: 1px solid #707070;
-  padding: 0 1rem;
 }
 
 /* Project Sidebar List */

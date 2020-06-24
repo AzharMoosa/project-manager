@@ -20,7 +20,7 @@ export const ProjectProvider = (props) => {
         { task: "Use REACT", complete: false, id: 7 },
       ],
       color: "blue",
-      date: "2020-06-26",
+      date: "2020.06.26",
       id: 28392,
     },
 

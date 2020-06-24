@@ -14,7 +14,7 @@ const ProgectProgress = ({ name, date, progress, project }) => {
         <Link to='/project' style={{ textDecoration: "none", color: "#000" }}>
           <h3 onClick={() => setSelectedProject(project)}>{name}</h3>
         </Link>
-        <h4>{date.replace(/-/g, "/")}</h4>
+        <h4>{date.replace(/-/g, ".");}</h4>
       </div>
       <ProgressBar progress={progress} />
     </div>
