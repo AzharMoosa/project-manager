@@ -1,0 +1,349 @@
+:root {
+  --red: #ff5a5a;
+  --green: #76ffca;
+  --blue: #76daff;
+  --yellow: #fffa76;
+  --purple: #ab76ff;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Poppins-Med";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Reg";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+/* Body */
+
+body {
+  font-family: "Poppins-Reg";
+  line-height: 1.4;
+}
+
+/* Utilities */
+
+/* Bullet Points */
+
+.white:before,
+.blue:before,
+.yellow:before,
+.green:before,
+.purple:before {
+  content: " ";
+  height: 12px;
+  width: 12px;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+
+.blue:before {
+  background-color: var(--blue);
+}
+
+.yellow:before {
+  background-color: var(--yellow);
+}
+
+.green:before {
+  background-color: var(--green);
+}
+
+.purple:before {
+  background-color: var(--purple);
+}
+
+.white:before {
+  background-color: #fff;
+}
+
+/* Container */
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30vw;
+  background-color: var(--red);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Poppins-Med";
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.nav-btns::after,
+.nav-btns:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.nav-btns {
+  width: 90%;
+  margin: auto;
+}
+
+.home-btn,
+.create-project-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.home-btn h3,
+.create-project-btn h3 {
+  margin-left: 1rem;
+  font-family: "Poppins-Med";
+  font-size: 25px;
+}
+
+.home-btn svg,
+.create-project-btn svg {
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title {
+  font-size: 80px;
+  font-family: "Poppins-Med";
+  color: var(--red);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.home-title:after {
+  content: " ";
+  display: block;
+  border-bottom: 5px solid var(--red);
+  width: 342px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Selected Project */
+
+.selected-project {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+
+.selected-project-title {
+  color: var(--red);
+  font-size: 60px;
+  font-family: "Poppins-Med";
+}
+
+.selected-project h3 {
+  font-size: 30px;
+  font-family: "Poppins-Med";
+  margin-top: 1rem;
+}
+
+.selected-project:first-child h3:after,
+.selected-project p::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 0.5rem 0;
+}
+
+.selected-project p {
+  color: #4e4e4e;
+  font-size: 25px;
+  padding: 0.5rem 0;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
+
+.tools-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools-input input {
+  width: 346px;
+  height: 29px;
+}
+
+/* Project Sidebar List */
+
+.project-side {
+  width: 85%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project-side h3 {
+  font-size: 25px;
+}
+
+/* Progress Bar */
+.progressbar {
+  width: 90%;
+  background-color: #fff;
+  border: 2px solid #2f2f2f;
+  border-radius: 17px;
+  margin: 0 auto 2rem auto;
+}
+
+.progressbar > div {
+  background-color: var(--green);
+  height: 33px;
+  border-radius: 17px;
+}
+
+.progressbar > div h3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1.8;
+  margin-right: 1rem;
+}
+
+/* Project List */
+
+.project-title {
+  width: 90%;
+  margin: 1.2rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title h3 {
+  font-size: 25px;
+  font-family: "Poppins-Med";
+}
+
+.project-title h4 {
+  font-size: 20px;
+  font-family: "Poppins-Reg";
+  color: #505050;
+}
+
+/* Create Project Popup */
+
+.hide {
+  display: none !important;
+}
+
+.create-project-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(99, 99, 99, 0.6);
+}
+
+.create-project-popup-content {
+  background-color: var(--red);
+  padding: 20px;
+  border: 3px solid #343434;
+  min-width: 526px;
+  min-height: 617px;
+  color: #fff;
+  -webkit-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.create-project-popup-content h1 {
+  text-align: center;
+}
+
+.create-project-popup-content h1:after {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 250px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-input label {
+  font-size: 25px;
+  font-family: "Poppins-Med";
+}
+
+.form-input input {
+  height: 46px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 21px;
+  padding: 0 0.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.form-input textarea {
+  height: 202px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 21px;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: "Poppins-Reg";
+}
+
+.create-btn {
+  background-color: var(--green);
+  width: 155px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  font-size: 22px;
+  margin: 2rem auto 0 auto;
+}

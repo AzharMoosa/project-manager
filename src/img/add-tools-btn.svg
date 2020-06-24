@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Add_Tool_Btn" data-name="Add Tool Btn" transform="translate(-49.866 -241.866)">
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(49.866 241.866)" fill="#76ffca" stroke="#000" stroke-width="2">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11" fill="none"/>
+    </g>
+    <path id="icons8-plus" d="M6.72,2V6.72H2V7.769H6.72v4.72H7.769V7.769h4.72V6.72H7.769V2Z" transform="translate(54.819 246.819)" stroke="#404040" stroke-width="1" fill-rule="evenodd"/>
+  </g>
+</svg>
