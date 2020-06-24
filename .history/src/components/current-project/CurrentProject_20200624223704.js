@@ -97,15 +97,6 @@ const CurrentProject = () => {
     updateProjects();
   };
 
-  const updateBulletPoint = (e) => {
-    let newColor = e.target.className;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      color: newColor,
-    }));
-    updateProjects();
-  };
-
   return (
     <div className='selected-project'>
       <div className='selected-project-head'>
@@ -241,17 +232,11 @@ const CurrentProject = () => {
       <div className='bullet-point-selector'>
         <h3>Bullet Point</h3>
         <div className='bullet-point-selector-bg'>
-          <div className='project-side blue' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side yellow'
-            onClick={updateBulletPoint}
-          ></div>
-          <div className='project-side white' onClick={updateBulletPoint}></div>
-          <div className='project-side green' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side purple'
-            onClick={updateBulletPoint}
-          ></div>
+          <div className='project-side blue' onClick={}></div>
+          <div className='project-side yellow'></div>
+          <div className='project-side white'></div>
+          <div className='project-side green'></div>
+          <div className='project-side purple'></div>
         </div>
       </div>
     </div>

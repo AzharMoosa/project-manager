@@ -320,22 +320,26 @@ body {
   padding: 0 1rem;
 }
 
-.bullet-point-selector {
+.images-title {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
   display: flex;
   align-items: center;
 }
 
-.bullet-point-selector-bg {
-  width: 234px;
-  height: 55px;
-  background-color: var(--red);
-  margin-left: 1rem;
+.images-title input {
   margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 2rem;
-  border-radius: 17px;
+  margin-left: 1rem;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.box img {
+  width: 644px;
+  height: 363px;
 }
 
 /* Project Sidebar List */

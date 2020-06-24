@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import Task from "./Task";
+
 import { SelectedProjectContext } from "../../SelectedProjectContext";
 import { ProjectContext } from "../../ProjectContext";
 
@@ -97,13 +98,20 @@ const CurrentProject = () => {
     updateProjects();
   };
 
-  const updateBulletPoint = (e) => {
-    let newColor = e.target.className;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      color: newColor,
-    }));
-    updateProjects();
+  const readImage = () => {
+    let input = document.querySelector(".image-input");
+    let gallery = document.querySelector(".image-gallery");
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = (e) => {
+        let box = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = e.target.result;
+        box.classList.add("box");
+        gallery.appendChild(box);
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
   };
 
   return (
@@ -238,21 +246,18 @@ const CurrentProject = () => {
         />
       </div>
 
-      <div className='bullet-point-selector'>
-        <h3>Bullet Point</h3>
-        <div className='bullet-point-selector-bg'>
-          <div className='project-side blue' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side yellow'
-            onClick={updateBulletPoint}
-          ></div>
-          <div className='project-side white' onClick={updateBulletPoint}></div>
-          <div className='project-side green' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side purple'
-            onClick={updateBulletPoint}
-          ></div>
+      <div className='images'>
+        <div className='images-title'>
+          <h3>Images</h3>
+          <input
+            type='file'
+            accept='image/*'
+            className='image-input'
+            onChange={readImage}
+          />
         </div>
+
+        <div className='image-gallery'></div>
       </div>
     </div>
   );

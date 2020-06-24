@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Task from "./Task";
 import { SelectedProjectContext } from "../../SelectedProjectContext";
 import { ProjectContext } from "../../ProjectContext";
@@ -11,6 +11,14 @@ const CurrentProject = () => {
   const [projects, setProjects] = useContext(ProjectContext);
   const [toolInput, setToolInput] = useState("");
   const [taskInput, setTaskInput] = useState("");
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   const modifyOverview = () => {
     let overview = document.querySelector(".overview").value;

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import Task from "./Task";
+
 import { SelectedProjectContext } from "../../SelectedProjectContext";
 import { ProjectContext } from "../../ProjectContext";
 
@@ -93,15 +94,6 @@ const CurrentProject = () => {
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       date: newDate,
-    }));
-    updateProjects();
-  };
-
-  const updateBulletPoint = (e) => {
-    let newColor = e.target.className;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      color: newColor,
     }));
     updateProjects();
   };
@@ -238,20 +230,10 @@ const CurrentProject = () => {
         />
       </div>
 
-      <div className='bullet-point-selector'>
-        <h3>Bullet Point</h3>
-        <div className='bullet-point-selector-bg'>
-          <div className='project-side blue' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side yellow'
-            onClick={updateBulletPoint}
-          ></div>
-          <div className='project-side white' onClick={updateBulletPoint}></div>
-          <div className='project-side green' onClick={updateBulletPoint}></div>
-          <div
-            className='project-side purple'
-            onClick={updateBulletPoint}
-          ></div>
+      <div className='images'>
+        <div className='images-title'>
+          <h3>Images</h3>
+          <input type='file' />
         </div>
       </div>
     </div>
