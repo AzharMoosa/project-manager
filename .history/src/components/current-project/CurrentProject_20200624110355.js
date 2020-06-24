@@ -12,36 +12,27 @@ const CurrentProject = () => {
 
   const [projects, setProjects] = useContext(ProjectContext);
 
-  const modifyOverview = () => {
-    let overview = document.querySelector(".overview").value;
+  const modifyOverview = (e) => {
+    const overview = e.target.value;
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       overview: overview,
     }));
+    updateProjects();
   };
 
   const updateProjects = () => {
-    modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
+    setProjects(
+      projects.map((project) =>
+        project === selectedProject ? { ...projects } : project
+      )
     );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
   };
 
   return (
     <div className='selected-project'>
-      <div className='selected-project-head'>
-        <h1 className='selected-project-title'>{selectedProject.name}</h1>
-        <button className='save-btn' onClick={updateProjects}>
-          SAVE
-        </button>
-      </div>
-
+      <h1 className='selected-project-title'>{selectedProject.name}</h1>
       <h3 className='selected-project-heading'>Overview</h3>
-
       <textarea
         type='text'
         className='overview'

@@ -411,8 +411,6 @@ body {
   border: none;
   font-size: 22px;
   margin: 2rem auto 0 auto;
-  cursor: pointer;
-  outline: none;
 }
 
 .save-btn {
@@ -422,6 +420,4 @@ body {
   border-radius: 24px;
   border: none;
   font-size: 22px;
-  cursor: pointer;
-  outline: none;
 }

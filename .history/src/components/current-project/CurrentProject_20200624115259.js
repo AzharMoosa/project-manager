@@ -23,7 +23,7 @@ const CurrentProject = () => {
   const updateProjects = () => {
     modifyOverview();
     let updatedArray = [...projects];
-    let i;
+    let i = arr.fi;
     updatedArray.map((p) =>
       p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
     );

@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
-import { ProjectContext } from "../../ProjectContext";
 
 const CurrentProject = () => {
   // eslint-disable-next-line
@@ -10,38 +9,16 @@ const CurrentProject = () => {
     SelectedProjectContext
   );
 
-  const [projects, setProjects] = useContext(ProjectContext);
+  const [overview, setOverview] = useState("");
 
-  const modifyOverview = () => {
-    let overview = document.querySelector(".overview").value;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      overview: overview,
-    }));
-  };
-
-  const updateProjects = () => {
-    modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
+  const modifyOverview = (e) => {
+    setOverview(e.target.value);
   };
 
   return (
     <div className='selected-project'>
-      <div className='selected-project-head'>
-        <h1 className='selected-project-title'>{selectedProject.name}</h1>
-        <button className='save-btn' onClick={updateProjects}>
-          SAVE
-        </button>
-      </div>
-
+      <h1 className='selected-project-title'>{selectedProject.name}</h1>
       <h3 className='selected-project-heading'>Overview</h3>
-
       <textarea
         type='text'
         className='overview'

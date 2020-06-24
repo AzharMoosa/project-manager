@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
@@ -22,13 +22,11 @@ const CurrentProject = () => {
 
   const updateProjects = () => {
     modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
+    let i = projects.indexOf(selectedProject);
+    let newArray = [...projects];
+    console.log(selectedProject);
+    newArray[0] = selectedProject;
+    setProjects(newArray);
   };
 
   return (

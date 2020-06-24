@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
@@ -11,24 +11,20 @@ const CurrentProject = () => {
   );
 
   const [projects, setProjects] = useContext(ProjectContext);
+  const [overview, setOverview] = useState("");
 
   const modifyOverview = () => {
-    let overview = document.querySelector(".overview").value;
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      overview: overview,
-    }));
+    let overviewText = document.querySelector(".overview").value;
+    console.log(overviewText);
   };
 
   const updateProjects = () => {
     modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
+    let i = projects.indexOf(selectedProject);
+    let newArray = [...projects];
+    console.log(selectedProject);
+    newArray[0] = selectedProject;
+    setProjects(newArray);
   };
 
   return (
@@ -45,8 +41,8 @@ const CurrentProject = () => {
       <textarea
         type='text'
         className='overview'
-        value={selectedProject.overview}
-        onChange={modifyOverview}
+        value={overview}
+        onChange={(e) => setOverview(e.target.value)}
       />
       <div className='tools'>
         <div className='tools-head'>

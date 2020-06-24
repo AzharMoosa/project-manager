@@ -161,6 +161,12 @@ body {
   align-items: center;
 }
 
+.selected-project-head button {
+  margin-bottom: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
 .selected-project-title {
   color: var(--red);
   font-size: 60px;
@@ -411,8 +417,6 @@ body {
   border: none;
   font-size: 22px;
   margin: 2rem auto 0 auto;
-  cursor: pointer;
-  outline: none;
 }
 
 .save-btn {
@@ -420,8 +424,4 @@ body {
   width: 155px;
   height: 48px;
   border-radius: 24px;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  outline: none;
 }

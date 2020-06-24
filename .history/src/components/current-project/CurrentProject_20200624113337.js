@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Task from "./Task";
 
 import { SelectedProjectContext } from "../../SelectedProjectContext";
@@ -12,23 +12,21 @@ const CurrentProject = () => {
 
   const [projects, setProjects] = useContext(ProjectContext);
 
-  const modifyOverview = () => {
-    let overview = document.querySelector(".overview").value;
+  const modifyOverview = (e) => {
+    let overview = e.target.value;
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
-      overview: overview,
+      overview: e.target.value,
     }));
   };
 
   const updateProjects = () => {
     modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
+    let i = projects.indexOf(selectedProject);
+    let newArray = [...projects];
+    console.log(selectedProject);
+    newArray[0] = selectedProject;
+    setProjects(newArray);
   };
 
   return (

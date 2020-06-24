@@ -22,13 +22,15 @@ const CurrentProject = () => {
 
   const updateProjects = () => {
     modifyOverview();
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
+    let i = projects.indexOf(
+      projects.map((project) =>
+        project.name === selectedProject.name ? project : ""
+      )
     );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
+    let newArray = [...projects];
+
+    newArray[0] = selectedProject;
+    setProjects(newArray);
   };
 
   return (
