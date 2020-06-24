@@ -22,22 +22,18 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
-    }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tools: updatedTools,
     }));
-    updateProjects();
+    updateProjects;
     clearToolsInput();
   };
 
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
-    setToolInput("");
   };
 
   const updateProjects = () => {

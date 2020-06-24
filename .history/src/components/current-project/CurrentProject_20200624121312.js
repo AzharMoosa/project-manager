@@ -22,22 +22,20 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
-    }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tools: updatedTools,
     }));
-    updateProjects();
+    console.log(updatedTools);
     clearToolsInput();
+    setToolInput("");
+    updateProjects();
   };
 
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
-    setToolInput("");
   };
 
   const updateProjects = () => {
@@ -50,28 +48,9 @@ const CurrentProject = () => {
     setProjects(updatedArray);
   };
 
-  const toggleComplete = (e) => {
-    let updatedTasks = [...selectedProject.tasks];
-    updatedTasks.map((task) =>
-      parseInt(task.id) === parseInt(e.target.id)
-        ? (task.complete = !task.complete)
-        : null
-    );
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
-  };
-
   return (
     <div className='selected-project'>
-      <div className='selected-project-head'>
-        <h1 className='selected-project-title'>{selectedProject.name}</h1>
-        <button className='save-btn' onClick={updateProjects}>
-          SAVE
-        </button>
-      </div>
+      <h1 className='selected-project-title'>{selectedProject.name}</h1>
 
       <h3 className='selected-project-heading'>Overview</h3>
 
@@ -135,12 +114,7 @@ const CurrentProject = () => {
 
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
-          <Task
-            key={task.id}
-            id={task.id}
-            task={task}
-            toggleComplete={toggleComplete}
-          />
+          <Task key={Math.random() * 100} task={task} />
         ))}
       </div>
     </div>

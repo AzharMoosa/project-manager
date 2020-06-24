@@ -22,8 +22,7 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
+    if (toolInput === "null") {
     }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({

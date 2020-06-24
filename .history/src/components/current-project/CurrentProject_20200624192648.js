@@ -22,22 +22,18 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
-    }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tools: updatedTools,
     }));
-    updateProjects();
     clearToolsInput();
+    updateProjects();
   };
 
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
-    setToolInput("");
   };
 
   const updateProjects = () => {
@@ -50,18 +46,8 @@ const CurrentProject = () => {
     setProjects(updatedArray);
   };
 
-  const toggleComplete = (e) => {
-    let updatedTasks = [...selectedProject.tasks];
-    updatedTasks.map((task) =>
-      parseInt(task.id) === parseInt(e.target.id)
-        ? (task.complete = !task.complete)
-        : null
-    );
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
+  const toggleComplete = () => {
+    console.log("asd");
   };
 
   return (
@@ -136,8 +122,7 @@ const CurrentProject = () => {
       <div className='tasks'>
         {selectedProject.tasks.map((task) => (
           <Task
-            key={task.id}
-            id={task.id}
+            key={Math.random() * 100}
             task={task}
             toggleComplete={toggleComplete}
           />

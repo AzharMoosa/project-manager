@@ -22,22 +22,18 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
-    }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tools: updatedTools,
     }));
-    updateProjects();
     clearToolsInput();
+    updateProjects();
   };
 
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
-    setToolInput("");
   };
 
   const updateProjects = () => {
@@ -51,17 +47,10 @@ const CurrentProject = () => {
   };
 
   const toggleComplete = (e) => {
-    let updatedTasks = [...selectedProject.tasks];
-    updatedTasks.map((task) =>
-      parseInt(task.id) === parseInt(e.target.id)
-        ? (task.complete = !task.complete)
-        : null
+    let updatedArray = [...projects];
+    updatedArray.map((p) =>
+      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
     );
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
   };
 
   return (

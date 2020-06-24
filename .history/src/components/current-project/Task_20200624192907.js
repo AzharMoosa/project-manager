@@ -1,10 +1,10 @@
 import React from "react";
 
-const Task = ({ task, toggleComplete, id }) => {
+const Task = ({ task, toggleComplete, key }) => {
   return (
     <div className='task'>
       <div
-        id={id}
+        id={key}
         onClick={toggleComplete}
         className={`bullet-point ${
           task.complete ? "complete" : "not-complete"

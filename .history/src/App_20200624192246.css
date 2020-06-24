@@ -158,7 +158,6 @@ body {
 .selected-project-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .selected-project-title {
@@ -245,6 +244,7 @@ body {
   border-radius: 50%;
   width: 41px;
   height: 41px;
+  background: #fff;
   border: 3px solid #000;
   cursor: pointer;
   margin-right: 1rem;
@@ -252,10 +252,6 @@ body {
 
 .complete {
   background: var(--blue);
-}
-
-.not-complete {
-  background: #fff;
 }
 
 .task {

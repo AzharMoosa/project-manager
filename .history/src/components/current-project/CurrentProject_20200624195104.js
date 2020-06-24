@@ -22,22 +22,18 @@ const CurrentProject = () => {
   };
 
   const updateTools = () => {
-    if (toolInput === "") {
-      return;
-    }
     let updatedTools = [...selectedProject.tools, toolInput];
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tools: updatedTools,
     }));
-    updateProjects();
     clearToolsInput();
+    updateProjects();
   };
 
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
-    setToolInput("");
   };
 
   const updateProjects = () => {
@@ -57,6 +53,7 @@ const CurrentProject = () => {
         ? (task.complete = !task.complete)
         : null
     );
+
     setSelectedProject((selectedProject) => ({
       ...selectedProject,
       tasks: updatedTasks,

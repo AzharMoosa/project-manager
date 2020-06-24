@@ -93,7 +93,7 @@ export const ProjectProvider = (props) => {
         { task: "Battleship Game", complete: true, id: 1 },
         { task: "Using Testing", complete: false, id: 2 },
         { task: "Clean And Simple Design", complete: true, id: 3 },
-        { task: "Use REACT", complete: false, id: 4 },
+        { task: "Use REACT", complete: false },
       ],
       color: "purple",
       date: "",
