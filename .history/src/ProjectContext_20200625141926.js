@@ -1,10 +1,14 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext } from "react";
 
 export const ProjectContext = createContext();
 
 export const ProjectProvider = (props) => {
+  // const [projects, setProjects] = useState(
+  //   localStorage.getItem("myValueInLocalStorage") || []
+  // );
+
   const [projects, setProjects] = useState(
-    JSON.parse(localStorage.getItem("projects")) || [
+    localStorage.getItem("myValueInLocalStorage") || [
       {
         name: "Welcome",
         overview: "You Project Overview Goes Here",
@@ -23,8 +27,8 @@ export const ProjectProvider = (props) => {
     ]
   );
 
-  useEffect(() => {
-    localStorage.setItem("projects", JSON.stringify(projects));
+  React.useEffect(() => {
+    localStorage.setItem("projects", projects);
   }, [projects]);
 
   return (

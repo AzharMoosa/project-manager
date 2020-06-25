@@ -42,6 +42,11 @@ const CurrentProject = () => {
       id: Math.floor(Math.random() * 100),
     };
     selectedProject.tasks.push(newTask);
+    // let updatedTasks = [...selectedProject.tasks, newTask];
+    // setSelectedProject((selectedProject) => ({
+    //   ...selectedProject,
+    //   tasks: selectedProject.push(newTask),
+    // }));
     updateProgress();
     clearTaskInput();
   };
@@ -113,12 +118,20 @@ const CurrentProject = () => {
     }));
   };
 
+  const updateBulletPoint = (e) => {
+    let newColor = e.target.className;
+    setSelectedProject((selectedProject) => ({
+      ...selectedProject,
+      color: newColor,
+    }));
+  };
+
   return (
     <div className='selected-project'>
       <div className='selected-project-head'>
         <h1 className='selected-project-title'>{selectedProject.name}</h1>
-        <button className='delete-btn' onClick={updateProjects}>
-          DELETE
+        <button className='save-btn' onClick={updateProjects}>
+          SAVE
         </button>
       </div>
 
@@ -244,6 +257,23 @@ const CurrentProject = () => {
           className='date-input'
           onChange={updateDate}
         />
+      </div>
+
+      <div className='bullet-point-selector'>
+        <h3>Bullet Point</h3>
+        <div className='bullet-point-selector-bg'>
+          <div className='project-side blue' onClick={updateBulletPoint}></div>
+          <div
+            className='project-side yellow'
+            onClick={updateBulletPoint}
+          ></div>
+          <div className='project-side white' onClick={updateBulletPoint}></div>
+          <div className='project-side green' onClick={updateBulletPoint}></div>
+          <div
+            className='project-side purple'
+            onClick={updateBulletPoint}
+          ></div>
+        </div>
       </div>
     </div>
   );

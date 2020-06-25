@@ -4,21 +4,23 @@ export const SelectedProjectContext = createContext();
 
 export const SelectedProjectProvider = (props) => {
   const [selectedProject, setSelectedProject] = useState(
-    JSON.parse(localStorage.getItem("selected-project")) || {
-      name: "Welcome",
-      overview: "You Project Overview Goes Here",
-      tools: ["Tools", "Go", "Here"],
-      progress: 0,
-      tasks: [
-        {
-          task: "Create Project By Clicking Button In Sidebar",
-          complete: false,
-          id: 1,
-        },
-      ],
-      date: "",
-      id: Math.floor(Math.random() * 100),
-    }
+    JSON.parse(
+      localStorage.getItem("selected-project") || {
+        name: "Welcome",
+        overview: "You Project Overview Goes Here",
+        tools: ["Tools", "Go", "Here"],
+        progress: 0,
+        tasks: [
+          {
+            task: "Create Project By Clicking Button In Sidebar",
+            complete: false,
+            id: 1,
+          },
+        ],
+        date: "",
+        id: Math.floor(Math.random() * 100),
+      }
+    )
   );
 
   useEffect(() => {
