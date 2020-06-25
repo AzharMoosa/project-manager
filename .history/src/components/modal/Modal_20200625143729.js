@@ -44,11 +44,7 @@ const Modal = () => {
     overviewInput.value = "";
   };
 
-  const keyPress = (e) => {
-    if (e.keyCode === 13) {
-      createProject(e);
-    }
-  };
+  const keyPress = (e) => {};
 
   return (
     <div className='create-project-popup hide'>
@@ -66,9 +62,12 @@ const Modal = () => {
             type='text'
             onChange={(e) => setProjectOverview(e.target.value)}
             className='overview-input'
-            onKeyDown={keyPress}
           />
-          <button className='create-btn' onClick={createProject}>
+          <button
+            className='create-btn'
+            onClick={createProject}
+            onKeyDown={keyPress}
+          >
             CREATE
           </button>
         </form>

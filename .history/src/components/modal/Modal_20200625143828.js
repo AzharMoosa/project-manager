@@ -46,7 +46,7 @@ const Modal = () => {
 
   const keyPress = (e) => {
     if (e.keyCode === 13) {
-      createProject(e);
+      console.log("sd");
     }
   };
 

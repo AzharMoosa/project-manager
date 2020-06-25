@@ -115,7 +115,6 @@ const CurrentProject = () => {
 
   const keyPress = (e) => {
     if (e.keyCode === 13) {
-      updateTask();
     }
   };
 
