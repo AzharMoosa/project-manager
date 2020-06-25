@@ -129,6 +129,7 @@ const CurrentProject = () => {
           : null
       )
     );
+    console.log(projects);
     setSelectedProject({
       name: "Welcome",
       overview: "You Project Overview Goes Here",
@@ -145,7 +146,8 @@ const CurrentProject = () => {
       id: Math.floor(Math.random() * 100),
     });
     history.push("/");
-    updateProjects();
+    window.location.reload();
+    up;
   };
 
   return (

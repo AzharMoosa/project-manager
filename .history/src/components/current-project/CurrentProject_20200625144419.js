@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
 import Task from "./Task";
-import { useHistory } from "react-router-dom";
 import { SelectedProjectContext } from "../../SelectedProjectContext";
 import { ProjectContext } from "../../ProjectContext";
 
 const CurrentProject = () => {
-  const history = useHistory();
   // eslint-disable-next-line
   const [selectedProject, setSelectedProject] = useContext(
     SelectedProjectContext
@@ -83,6 +81,16 @@ const CurrentProject = () => {
     setTaskInput("");
   };
 
+  const updateProjects = () => {
+    let updatedArray = [...projects];
+    let i;
+    updatedArray.map((p) =>
+      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
+    );
+    updatedArray[i] = selectedProject;
+    setProjects(updatedArray);
+  };
+
   const updateProgress = () => {
     let updatedTasks = [...selectedProject.tasks];
     let count = 0;
@@ -95,16 +103,6 @@ const CurrentProject = () => {
       ...selectedProject,
       progress: progress,
     }));
-  };
-
-  const updateProjects = () => {
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
   };
 
   const updateDate = () => {
@@ -121,32 +119,7 @@ const CurrentProject = () => {
     }
   };
 
-  const deleteProject = () => {
-    setProjects(
-      projects.map((project) =>
-        parseInt(project.id) === parseInt(selectedProject.id)
-          ? projects.splice(projects.indexOf(selectedProject), 1)
-          : null
-      )
-    );
-    setSelectedProject({
-      name: "Welcome",
-      overview: "You Project Overview Goes Here",
-      tools: ["Tools", "Go", "Here"],
-      progress: 0,
-      tasks: [
-        {
-          task: "Create Project By Clicking Button In Sidebar",
-          complete: false,
-          id: 1,
-        },
-      ],
-      date: "",
-      id: Math.floor(Math.random() * 100),
-    });
-    history.push("/");
-    updateProjects();
-  };
+  const deleteProject = () => {};
 
   return (
     <div className='selected-project'>

@@ -129,6 +129,7 @@ const CurrentProject = () => {
           : null
       )
     );
+    console.log(projects);
     setSelectedProject({
       name: "Welcome",
       overview: "You Project Overview Goes Here",

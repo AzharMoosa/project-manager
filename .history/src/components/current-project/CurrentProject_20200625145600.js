@@ -97,16 +97,6 @@ const CurrentProject = () => {
     }));
   };
 
-  const updateProjects = () => {
-    let updatedArray = [...projects];
-    let i;
-    updatedArray.map((p) =>
-      p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
-    );
-    updatedArray[i] = selectedProject;
-    setProjects(updatedArray);
-  };
-
   const updateDate = () => {
     let newDate = document.querySelector(".date-input").value;
     setSelectedProject((selectedProject) => ({
@@ -122,6 +112,8 @@ const CurrentProject = () => {
   };
 
   const deleteProject = () => {
+    history.push("/");
+    location.reload();
     setProjects(
       projects.map((project) =>
         parseInt(project.id) === parseInt(selectedProject.id)
@@ -129,6 +121,7 @@ const CurrentProject = () => {
           : null
       )
     );
+    console.log(projects);
     setSelectedProject({
       name: "Welcome",
       overview: "You Project Overview Goes Here",
@@ -144,8 +137,6 @@ const CurrentProject = () => {
       date: "",
       id: Math.floor(Math.random() * 100),
     });
-    history.push("/");
-    updateProjects();
   };
 
   return (
