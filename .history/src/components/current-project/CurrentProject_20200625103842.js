@@ -65,7 +65,6 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProjects();
   };
 
   const clearToolsInput = () => {
@@ -101,12 +100,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {

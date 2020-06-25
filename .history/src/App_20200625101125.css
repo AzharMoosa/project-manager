@@ -259,18 +259,13 @@ body {
 }
 
 .task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task-name {
+  border: 10px solid black;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.task-name h3 {
+.task h3 {
   font-size: 25px;
   font-family: "Poppins-Reg";
   margin-bottom: 1rem;
@@ -281,14 +276,7 @@ body {
 }
 
 .delete-task-btn {
-  cursor: pointer;
-  border-radius: 50%;
-  width: 33px;
-  height: 33px;
-  border: 2px solid #000;
-  cursor: pointer;
-  background-color: var(--red);
-  color: #fff;
+  flex: 1;
 }
 
 .add-tasks {

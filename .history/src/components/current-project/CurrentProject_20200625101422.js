@@ -52,22 +52,6 @@ const CurrentProject = () => {
     clearTaskInput();
   };
 
-  const deleteTask = (e) => {
-    let updatedTasks = [...selectedProject.tasks];
-    let i = 0;
-    updatedTasks.map((task) =>
-      parseInt(task.id) === parseInt(e.target.id)
-        ? (i = updatedTasks.indexOf(task))
-        : null
-    );
-    updatedTasks.splice(i, 1);
-    setSelectedProject((selectedProject) => ({
-      ...selectedProject,
-      tasks: updatedTasks,
-    }));
-    updateProjects();
-  };
-
   const clearToolsInput = () => {
     let input = document.querySelector(".add-tools");
     input.value = "";
@@ -101,12 +85,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {
@@ -126,6 +105,8 @@ const CurrentProject = () => {
     }));
     updateProjects();
   };
+
+  const deleteTask = () => {};
 
   return (
     <div className='selected-project'>

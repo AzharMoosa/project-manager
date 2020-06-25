@@ -54,7 +54,7 @@ const CurrentProject = () => {
 
   const deleteTask = (e) => {
     let updatedTasks = [...selectedProject.tasks];
-    let i = 0;
+    let i;
     updatedTasks.map((task) =>
       parseInt(task.id) === parseInt(e.target.id)
         ? (i = updatedTasks.indexOf(task))
@@ -65,7 +65,6 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProjects();
   };
 
   const clearToolsInput = () => {
@@ -101,12 +100,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {

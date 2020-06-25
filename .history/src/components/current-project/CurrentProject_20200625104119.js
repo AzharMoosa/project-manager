@@ -101,12 +101,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {
@@ -142,7 +137,7 @@ const CurrentProject = () => {
         type='text'
         className='overview'
         value={selectedProject.overview}
-        onChange={modifyOverview}
+        onChange={() => modifyOverview; updateProjects}
       />
       <div className='tools'>
         <div className='tools-head'>
@@ -159,7 +154,7 @@ const CurrentProject = () => {
               height='24'
               viewBox='0 0 24 24'
               className='add-tool-btn'
-              onClick={updateTools}
+              onClick={(updateTools, updateProjects)}
             >
               <g
                 id='Add_Tool_Btn'

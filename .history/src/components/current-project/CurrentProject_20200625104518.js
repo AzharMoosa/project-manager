@@ -101,12 +101,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {
@@ -281,3 +276,13 @@ const CurrentProject = () => {
 };
 
 export default CurrentProject;
+
+export const updateProjects = () => {
+  let updatedArray = [...projects];
+  let i;
+  updatedArray.map((p) =>
+    p.name === selectedProject.name ? (i = projects.indexOf(p)) : null
+  );
+  updatedArray[i] = selectedProject;
+  setProjects(updatedArray);
+};

@@ -101,12 +101,7 @@ const CurrentProject = () => {
       ...selectedProject,
       tasks: updatedTasks,
     }));
-    updateProgress();
     updateProjects();
-  };
-
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
   };
 
   const updateDate = () => {
@@ -128,7 +123,7 @@ const CurrentProject = () => {
   };
 
   return (
-    <div className='selected-project'>
+    <div className='selected-project' onKeyDown={console.log("s")}>
       <div className='selected-project-head'>
         <h1 className='selected-project-title'>{selectedProject.name}</h1>
         <button className='save-btn' onClick={updateProjects}>

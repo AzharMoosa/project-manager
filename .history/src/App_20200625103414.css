@@ -283,12 +283,11 @@ body {
 .delete-task-btn {
   cursor: pointer;
   border-radius: 50%;
-  width: 33px;
-  height: 33px;
-  border: 2px solid #000;
+  width: 41px;
+  height: 41px;
+  border: 3px solid #000;
   cursor: pointer;
-  background-color: var(--red);
-  color: #fff;
+  margin-right: 1rem;
 }
 
 .add-tasks {

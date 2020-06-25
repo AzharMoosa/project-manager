@@ -105,9 +105,7 @@ const CurrentProject = () => {
     updateProjects();
   };
 
-  const updateProgress = () => {
-    let updatedTasks = [...selectedProject.tasks];
-  };
+  const updateProgress = () => {};
 
   const updateDate = () => {
     let newDate = document.querySelector(".date-input").value;
