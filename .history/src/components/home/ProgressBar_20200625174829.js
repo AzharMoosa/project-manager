@@ -6,12 +6,12 @@ const ProgressBar = ({ progress }) => {
       <div
         style={
           progress > 6
-            ? { width: `${progress}%` }
+            ? { width: `${progress}` }
             : { width: "6%", backgroundColor: "#fff" }
         }
       >
         <div className='progress-text'>
-          <h3>{progress}%</h3>
+          <h3>{progress} %</h3>
         </div>
       </div>
     </div>

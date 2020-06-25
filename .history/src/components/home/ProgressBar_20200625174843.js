@@ -11,7 +11,7 @@ const ProgressBar = ({ progress }) => {
         }
       >
         <div className='progress-text'>
-          <h3>{progress}%</h3>
+          <h3>{progress} %</h3>
         </div>
       </div>
     </div>

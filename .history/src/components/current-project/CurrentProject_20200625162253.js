@@ -115,7 +115,7 @@ const CurrentProject = () => {
     }));
   };
 
-  const keyPressTasks = (e) => {
+  const keyPress = (e) => {
     if (e.keyCode === 13) {
       updateTask();
     }
@@ -123,7 +123,7 @@ const CurrentProject = () => {
 
   const keyPressTools = (e) => {
     if (e.keyCode === 13) {
-      updateTools();
+      updateTask();
     }
   };
 
@@ -179,7 +179,7 @@ const CurrentProject = () => {
               type='text'
               className='add-tools'
               onChange={(e) => setToolInput(e.target.value)}
-              onKeyDown={keyPressTools}
+              onKeyDown={}
             />
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -275,7 +275,7 @@ const CurrentProject = () => {
           className='add-task-input'
           onChange={(e) => setTaskInput(e.target.value)}
           placeholder={"ADD TASK"}
-          onKeyDown={keyPressTasks}
+          onKeyDown={keyPress}
         />
       </div>
 

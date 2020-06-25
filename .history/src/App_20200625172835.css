@@ -348,7 +348,7 @@ body {
   border-radius: 17px;
 }
 
-.progress-text h3 {
+.progressbar > div h3 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -488,7 +488,7 @@ body {
     padding-right: 0.3rem;
   }
 
-  .progress-text h3 {
+  .progressbar > div h3 {
     line-height: 2.3;
     font-size: 15px;
     width: 100%;
@@ -575,14 +575,14 @@ body {
     height: 24px;
   }
 
-  .progress-text h3 {
+  .progressbar > div h3 {
     line-height: 2.4;
     font-size: 10px;
     width: 100%;
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   .home-title {
     display: none;
   }
@@ -611,59 +611,51 @@ body {
 
   .create-project-popup {
     transform: scale(0.6);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
   }
 
-  .create-project-popup-content {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+  .selected-project-title {
+    font-size: 30px;
   }
 
-  .selected-project-head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .selected-project-head h1 {
-    font-size: 20px;
-  }
-
-  .delete-btn {
-    transform: scale(0.8);
-  }
-
-  .selected-project h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .overview {
+  .project-side h3 {
     font-size: 15px;
   }
 
-  .tools-head {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .add-tools {
-    width: 100px;
+  .white:before {
+    height: 8px;
+    width: 8px;
   }
 
   .bullet-point {
-    display: none;
+    width: 3vw;
+    height: 3vw;
   }
 
-  .add-tasks {
-    display: none !important;
+  .task-name h3 {
+    font-size: 12px;
   }
 
-  .date {
-    display: none;
+  .add-tools {
+    width: 150px;
+  }
+
+  .add-tool-btn {
+    cursor: pointer;
+  }
+
+  .delete-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .progressbar > div {
+    height: 24px;
+  }
+
+  .progressbar > div h3 {
+    line-height: 2.4;
+    font-size: 10px;
+    width: 100%;
   }
 }

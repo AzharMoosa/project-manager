@@ -348,7 +348,7 @@ body {
   border-radius: 17px;
 }
 
-.progress-text h3 {
+.progressbar > div h3 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -488,7 +488,7 @@ body {
     padding-right: 0.3rem;
   }
 
-  .progress-text h3 {
+  .progressbar > div h3 {
     line-height: 2.3;
     font-size: 15px;
     width: 100%;
@@ -575,7 +575,7 @@ body {
     height: 24px;
   }
 
-  .progress-text h3 {
+  .progressbar > div h3 {
     line-height: 2.4;
     font-size: 10px;
     width: 100%;
@@ -622,48 +622,6 @@ body {
     box-shadow: none;
   }
 
-  .selected-project-head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .selected-project-head h1 {
-    font-size: 20px;
-  }
-
-  .delete-btn {
-    transform: scale(0.8);
-  }
-
-  .selected-project h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .overview {
-    font-size: 15px;
-  }
-
-  .tools-head {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .add-tools {
-    width: 100px;
-  }
-
-  .bullet-point {
-    display: none;
-  }
-
-  .add-tasks {
-    display: none !important;
-  }
-
-  .date {
-    display: none;
+  .selected-project {
   }
 }

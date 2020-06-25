@@ -348,7 +348,7 @@ body {
   border-radius: 17px;
 }
 
-.progress-text h3 {
+.progressbar > div h3 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -484,186 +484,26 @@ body {
 /* Media Queries */
 @media (max-width: 1200px) {
   /* Progress Bar */
+  .progressbar {
+    width: 90%;
+    background-color: #fff;
+    border: 2px solid #2f2f2f;
+    border-radius: 17px;
+    margin: 0 auto 2rem auto;
+  }
+
   .progressbar > div {
-    padding-right: 0.3rem;
+    background-color: var(--green);
+    height: 33px;
+    border-radius: 17px;
   }
 
-  .progress-text h3 {
-    line-height: 2.3;
-    font-size: 15px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 812px) {
-  .home-title {
-    font-size: 60px;
-  }
-
-  .selected-project-title {
-    font-size: 50px;
-  }
-
-  .bullet-point {
-    border-radius: 50%;
-    width: 4vw;
-    height: 4vw;
-    border: 3px solid #000;
-    cursor: pointer;
+  .progressbar > div h3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 1.8;
     margin-right: 1rem;
-  }
-
-  .task-name h3 {
-    font-size: 17px;
-  }
-
-  .add-tools {
-    width: 200px;
-  }
-
-  .add-tool-btn {
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 569px) {
-  .home-title {
-    font-size: 50px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .selected-project-title {
-    font-size: 30px;
-  }
-
-  .project-side h3 {
-    font-size: 15px;
-  }
-
-  .white:before {
-    height: 8px;
-    width: 8px;
-  }
-
-  .bullet-point {
-    width: 3vw;
-    height: 3vw;
-  }
-
-  .task-name h3 {
-    font-size: 12px;
-  }
-
-  .add-tools {
-    width: 150px;
-  }
-
-  .add-tool-btn {
-    cursor: pointer;
-  }
-
-  .delete-btn {
-    width: 100px;
-    height: 35px;
-    font-size: 15px;
-  }
-
-  .progressbar > div {
-    height: 24px;
-  }
-
-  .progress-text h3 {
-    line-height: 2.4;
     font-size: 10px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 376px) {
-  .home-title {
-    display: none;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-
-  .nav-btns {
-    transform: scale(0.6);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .nav-btns::after,
-  .nav-btns:before {
-    display: none;
-    margin: 0 auto;
-  }
-
-  .nav-btns h3 {
-    display: none;
-  }
-
-  .create-project-popup {
-    transform: scale(0.6);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .create-project-popup-content {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .selected-project-head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .selected-project-head h1 {
-    font-size: 20px;
-  }
-
-  .delete-btn {
-    transform: scale(0.8);
-  }
-
-  .selected-project h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .overview {
-    font-size: 15px;
-  }
-
-  .tools-head {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .add-tools {
-    width: 100px;
-  }
-
-  .bullet-point {
-    display: none;
-  }
-
-  .add-tasks {
-    display: none !important;
-  }
-
-  .date {
-    display: none;
   }
 }

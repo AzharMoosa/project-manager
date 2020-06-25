@@ -123,7 +123,7 @@ const CurrentProject = () => {
 
   const keyPressTools = (e) => {
     if (e.keyCode === 13) {
-      updateTools();
+      updateTask();
     }
   };
 
@@ -179,7 +179,7 @@ const CurrentProject = () => {
               type='text'
               className='add-tools'
               onChange={(e) => setToolInput(e.target.value)}
-              onKeyDown={keyPressTools}
+              onKeyDown={}
             />
             <svg
               xmlns='http://www.w3.org/2000/svg'

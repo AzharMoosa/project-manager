@@ -123,7 +123,7 @@ const CurrentProject = () => {
 
   const keyPressTools = (e) => {
     if (e.keyCode === 13) {
-      updateTools();
+      updateTask();
     }
   };
 
